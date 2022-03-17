@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MainMenuTemplate1.MainPage">
+
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image Source="background1.jpg" Aspect="AspectFill"/>
+
+        <StackLayout Margin="50,50,50,50" HeightRequest="400" BackgroundColor="Transparent" Padding="0">
+            <Image Source="profile1.png" HeightRequest="70" Margin="0,150,0,0" HorizontalOptions="Center"/>
+            <Frame x:Name="loginFrame" CornerRadius="10" HeightRequest="40" Padding="5" Margin="0,50,0,0">
+            <Entry x:Name="loginEntry" Placeholder="login" PlaceholderColor="DarkGray" Margin="20,0,20,0" TextColor="Black"/>
+            </Frame>
+            <Frame x:Name="passwordFrame" CornerRadius="10" HeightRequest="40" Padding="5" Margin="0,10,0,0">
+                <Entry x:Name="passwordEntry" IsPassword="True" Placeholder="hasło" PlaceholderColor="DarkGray" Margin="20,0,20,0" TextColor="Black"/>
+            </Frame>
+            <Frame x:Name="rePasswordFrame" CornerRadius="10" HeightRequest="40" Padding="5" Margin="0,10,0,0" IsVisible="false">
+                <Entry x:Name="rePasswordEntry" IsPassword="True" Placeholder="powtórz hasło" PlaceholderColor="DarkGray" Margin="20,0,20,0" TextColor="Black"/>
+            </Frame>
+            <Frame x:Name="controlsFrame" BackgroundColor="Black" CornerRadius="10" HeightRequest="40" Padding="1">
+                <Grid Margin="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="checkBoxRememberLogData" CheckedChanged="checkBoxRememberLogData_CheckedChanged" Grid.Column="0" Grid.Row="0"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="zapamiętaj" TextColor="White" VerticalOptions="Center"/>
+                    <CheckBox x:Name="checkBoxShowPassword" CheckedChanged="checkBoxShowPassword_CheckedChanged" Grid.Column="2" Grid.Row="0"/>
+                    <Label Grid.Column="3" Grid.Row="0" Text="pokaż hasło" TextColor="White" VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <Button x:Name="btnLogin" Clicked="btnLogin_Clicked" CornerRadius="10" HorizontalOptions="CenterAndExpand" WidthRequest="200" Margin="0,50,0,0" Text="zaloguj"/>
+            <Button x:Name="btnRegister" Clicked="btnRegister_Clicked" BackgroundColor="Transparent" TextColor="White" Text="zarejestruj" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+        </Grid>
+   
+
+</ContentPage>
